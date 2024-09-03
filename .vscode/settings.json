@@ -13,8 +13,6 @@
     "titleBar.activeForeground": "#15202b",
     "titleBar.inactiveBackground": "#35c2ab99",
     "titleBar.inactiveForeground": "#15202b99",
-    "statusBar.debuggingBackground": "#c2354c",
-    "statusBar.debuggingForeground": "#e7e7e7",
     "activityBar.activeBackground": "#58d2be",
     "activityBar.background": "#58d2be",
     "activityBar.foreground": "#15202b",
