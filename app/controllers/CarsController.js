@@ -1,5 +1,7 @@
 import { AppState } from "../AppState.js";
 import { carsService } from "../services/CarsService.js";
+import { getFormData } from "../utils/FormHandler.js";
+import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
 
 
@@ -26,6 +28,27 @@ export class CarsController {
 
 
   async getCars() {
-    await carsService.getCars()
+
+    try {
+      // we will try to execute this code
+      await carsService.getCars()
+    } catch (error) {
+      // if an error is thrown, we catch it here and run different code
+      Pop.error(error) // notify the user something went wrong
+      console.error(error) // notify the developer that something went wrong
+    }
+  }
+
+  async createCar() {
+    try {
+      event.preventDefault()
+      const carFormElem = event.target
+      const carFormData = getFormData(carFormElem)
+      await carsService.createCar(carFormData)
+      Pop.toast("you created the car!")
+    } catch (error) {
+      Pop.error(error) // notify the user something went wrong
+      console.error(error) // notify the developer that something went wrong
+    }
   }
 }

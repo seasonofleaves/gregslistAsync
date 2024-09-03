@@ -1,5 +1,55 @@
 <div class="container">
   <h1>Wanna Buy A Car?</h1>
+  <section class="row">
+    <div class="col-12">
+      <form onsubmit="app.CarsController.createCar()">
+        <div class="mb-3">
+          <label for="make">Car Make</label>
+          <input id="make" name="make" type="text" required minlength="2" maxlength="100" placeholder="Car Make...">
+        </div>
+        <div class="mb-3">
+          <label for="model">Car Model</label>
+          <input id="model" name="model" type="text" required maxlength="200" placeholder="Car Model...">
+        </div>
+        <div class="mb-3">
+          <label for="imgUrl">Car Image</label>
+          <input id="imgUrl" name="imgUrl" type="url" required maxlength="2000" placeholder="Car Image...">
+        </div>
+        <div class="mb-3">
+          <label for="year">Car Year</label>
+          <input id="year" name="year" type="number" required min="1886" max="2025" placeholder="2025">
+        </div>
+        <div class="mb-3">
+          <label for="price">Car Price</label>
+          <input id="price" name="price" type="number" required min="0" max="1700000" placeholder="0">
+        </div>
+        <div class="mb-3">
+          <label for="mileage">Car Mileage</label>
+          <input id="mileage" name="mileage" type="number" required min="1" max="999999" placeholder="1">
+        </div>
+        <div class="mb-3">
+          <label for="description">Car Description</label>
+          <textarea id="description" name="description" maxlength="5000"
+            placeholder="Description of the car"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="color">Car Color</label>
+          <input id="color" name="color" type="color" required>
+        </div>
+        <div class="mb-3">
+          <label for="transmission">Car Transmission</label>
+          <select id="transmission" name="transmission" required>
+            <option value="automatic">Automatic</option>
+            <option value="manual">Manual</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
   <section id="car-listings" class="row">
 
   </section>

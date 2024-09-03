@@ -5,6 +5,12 @@ import { api } from "./AxiosService.js";
 
 
 class CarsService {
+  async createCar(carData) {
+    // NOTE post is for creating a resource
+    const response = await api.post('api/cars', carData)
+    console.log('✨🚗📡', response.data);
+
+  }
   async getCars() {
     // console.time('timer')
     // const response = await fetch('https://sandbox.codeworksacademy.com/api/cars') // Jeremy, Get me coffee

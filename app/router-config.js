@@ -12,8 +12,10 @@ export const router = new Router([
     view: /*html*/`
     <div class="bg-white p-3">
       <div class="card-body">
-        <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
+        <p>Gregslist</p>
+        <a href="#/cars">
+          <button>🚗</button>
+        </a>
       </div>
     </div>
     `

@@ -9,3 +9,7 @@
 .profile-picture.profile-picture-sm {
   height: 64px;
 }
+
+label {
+  display: block;
+}
