@@ -14,7 +14,7 @@ export const router = new Router([
       <div class="card-body">
         <p>Gregslist</p>
         <a href="#/cars">
-          <button>🚗</button>
+          <button class="btn btn-outline-dark" title="Go to the cars page">🚗</button>
         </a>
       </div>
     </div>

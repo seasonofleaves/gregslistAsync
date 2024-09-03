@@ -8,12 +8,16 @@ import { setHTML } from "../utils/Writer.js";
 export class CarsController {
   constructor() {
     console.log('🚗🎮');
-    this.getCars()
-    // this.drawCars() don't want to draw cars on load because there are no cars on load
     AppState.on('cars', this.drawCars)
 
     AppState.on('user', () => console.log('🧞🔒', AppState.user))
     AppState.on('account', () => console.log('🧞🗄️', AppState.account))
+    // NOTE this listener is triggered when someone logs in
+    AppState.on('user', this.showCarForm)
+    // this.drawCars() don't want to draw cars on load because there are no cars on load
+
+    this.getCars()
+    this.showCarForm()
   }
 
 
@@ -52,5 +56,14 @@ export class CarsController {
       Pop.error(error) // notify the user something went wrong
       console.error(error) // notify the developer that something went wrong
     }
+  }
+
+  showCarForm() {
+    if (AppState.user == null) { return }
+
+    const carFormElem = document.getElementById('car-form')
+    if (carFormElem == null) { return }
+
+    carFormElem.classList.remove('d-none')
   }
 }
