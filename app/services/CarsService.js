@@ -10,6 +10,8 @@ class CarsService {
     const response = await api.post('api/cars', carData)
     console.log('✨🚗📡', response.data);
 
+    const newCar = new Car(response.data)
+    AppState.cars.push(newCar)
   }
   async getCars() {
     // console.time('timer')

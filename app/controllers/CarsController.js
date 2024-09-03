@@ -46,6 +46,8 @@ export class CarsController {
       const carFormData = getFormData(carFormElem)
       await carsService.createCar(carFormData)
       Pop.toast("you created the car!")
+      // @ts-ignore
+      carFormElem.reset()
     } catch (error) {
       Pop.error(error) // notify the user something went wrong
       console.error(error) // notify the developer that something went wrong

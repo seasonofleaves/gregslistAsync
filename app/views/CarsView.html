@@ -5,15 +5,15 @@
       <form onsubmit="app.CarsController.createCar()">
         <div class="mb-3">
           <label for="make">Car Make</label>
-          <input id="make" name="make" type="text" required minlength="2" maxlength="100" placeholder="Car Make...">
+          <input id="make" name="make" type="text" required maxlength="500" placeholder="Car Make...">
         </div>
         <div class="mb-3">
           <label for="model">Car Model</label>
-          <input id="model" name="model" type="text" required maxlength="200" placeholder="Car Model...">
+          <input id="model" name="model" type="text" required maxlength="500" placeholder="Car Model...">
         </div>
         <div class="mb-3">
           <label for="imgUrl">Car Image</label>
-          <input id="imgUrl" name="imgUrl" type="url" required maxlength="2000" placeholder="Car Image...">
+          <input id="imgUrl" name="imgUrl" type="url" required maxlength="500" placeholder="Car Image...">
         </div>
         <div class="mb-3">
           <label for="year">Car Year</label>
@@ -24,24 +24,26 @@
           <input id="price" name="price" type="number" required min="0" max="1700000" placeholder="0">
         </div>
         <div class="mb-3">
-          <label for="mileage">Car Mileage</label>
-          <input id="mileage" name="mileage" type="number" required min="1" max="999999" placeholder="1">
-        </div>
-        <div class="mb-3">
           <label for="description">Car Description</label>
-          <textarea id="description" name="description" maxlength="5000"
-            placeholder="Description of the car"></textarea>
+          <textarea id="description" name="description" maxlength="500" placeholder="Description of the car"></textarea>
         </div>
         <div class="mb-3">
           <label for="color">Car Color</label>
           <input id="color" name="color" type="color" required>
         </div>
         <div class="mb-3">
-          <label for="transmission">Car Transmission</label>
-          <select id="transmission" name="transmission" required>
-            <option value="automatic">Automatic</option>
-            <option value="manual">Manual</option>
+          <label for="engineType">Car EngineType</label>
+          <select id="engineType" name="engineType" required>
             <option value="unknown">Unknown</option>
+            <option value="2 stroke">2 stroke</option>
+            <option value="4 cylinder">4 cylinder</option>
+            <option value="v6">v6</option>
+            <option value="v8">v8</option>
+            <option value="v12">v12</option>
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large">large</option>
+            <option value="chuncko">chuncko</option>
           </select>
         </div>
         <div>
